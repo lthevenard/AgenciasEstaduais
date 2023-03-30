@@ -18,7 +18,8 @@ for (i in seq_along(divergences)) {
 divergences_cols <- bind_rows(divergences_cols)
 
 divergences_cols %>%
-    arrange(desc(perc_div))
+  arrange(desc(perc_div)) %>% 
+  View()
 
 divergences_agencies <- vector("list", nrow(divergences))
 
