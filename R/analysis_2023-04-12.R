@@ -228,6 +228,8 @@ df_numeric %>%
     Moda = getmode(Preenchimento),
     Media = mean(Preenchimento, na.rm = TRUE),
     Mediana = median(Preenchimento, na.rm = TRUE)
-)
+) %>%
+  View()
 
+View(boolean_heterogeneity %>% mutate(Prevalencia = ifelse(Classe0 > Classe1, "Classe 0", "Classe 1")))
 
