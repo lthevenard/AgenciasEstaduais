@@ -1,0 +1,67 @@
+;Pesquisador Responsável;UF;Nome;Ano de Criação;Site;Natureza de Autarquia;Criada por Lei;Resulta de Fusão;Competência Normativa;Autonomia Financeira;Autonomia Patrimonial;Autonomia Técnica;Autonomia Administrativa;Poder Concedente;Poder Sancionatório;Poder TAC;Programa de Compliance;Taxa de Regulação;Multa;Assessoria Jurídica;Assessores Procuradores;Algum Procurador;Assessoria Vinculada PGE;Ouvidoria;Ouvidor Mandato Fixo;Servidores Estatutários;Participação Social;Agenda Regulatória;Análise de Impacto;Nomeação Exclusivamente pelo Governador;Eleição Interna Presidente;Mandato Definido;Mandato Não-coincidente Diretores;Mandato Não-coincidente Governador;Tempo Mandato (meses);Experiência Prévia;Tempo Experiência (anos);Sabatina Assembleia;Aprovação Assembleia;Vedação Filiação Partidária;Alguma Vedação Setor Público;Algum Impedimento Prévio Setor;Quarentena;Tempo Quarentena (meses);Disciplina Mandatos Provisórios;Indicação Livre Mandatos Provisórios;Prevê Casos Exoneração;Prevê Procedimento Exoneração
+58;Gustavo;DF;ADASA;2004;http://www.adasa.df.gov.br/;1;1;0;1;1;1;0;1;0;1;1;0;1;1;1;1;1;1;1;1;1;1;0;0;1;0;1;1;1;60;1;0;1;1;1;0;0;1;6;1;0;1;1
+29;Soraya;DF;ADASA;2004;http://www.adasa.df.gov.br/;1;1;0;1;1;1;0;1;0;1;1;0;1;1;1;1;1;1;1;1;1;1;0;0;1;0;1;1;1;60;1;0;1;1;1;0;0;1;6;1;0;1;1
+1;Bernardo;AC;AGEAC;2014;http://ageac.acre.gov.br/;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;0;0;1;0;0;48;0;0;0;1;0;0;0;1;6;1;0;1;0
+30;José Vasco;AC;AGEAC;2014;http://ageac.acre.gov.br/;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;0;0;1;0;0;48;0;0;0;1;0;0;0;1;6;1;0;1;0
+40;Gustavo;MS;AGEMS;2001;https://www.agems.ms.gov.br/;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;1;0;1;0;1;0;0;48;1;0;0;1;1;0;0;1;12;1;1;1;0
+11;Soraya;MS;AGEMS;2001;https://www.agems.ms.gov.br/;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;1;0;1;0;1;0;0;48;1;0;0;1;1;0;0;1;12;1;1;1;0
+49;Gustavo;RJ;AGENERSA;2005;www.agenersa.rj.gov.br;1;1;0;0;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;0;48;1;10;1;1;1;0;0;1;12;1;0;1;1
+20;Soraya;RJ;AGENERSA;2005;www.agenersa.rj.gov.br;1;1;0;0;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;0;48;1;10;1;1;1;0;0;1;12;1;0;1;1
+16;Lucas;PR;AGEPAR;2012;www.agepar.pr.gov.br;1;1;0;1;1;0;0;1;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;1;48;1;5;1;1;0;1;1;1;12;0;0;1;1
+45;Thierry;PR;AGEPAR;2012;www.agepar.pr.gov.br;1;1;0;1;1;0;0;1;0;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;1;48;1;5;1;1;0;1;1;1;12;0;0;1;1
+12;Lucas;MT;AGER;1999;http://www.ager.mt.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;1;1;0;0;1;1;1;1;1;1;1;1;0;1;1;1;48;0;-1;0;1;0;1;0;1;6;1;1;1;1
+41;Thierry;MT;AGER;1999;http://www.ager.mt.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;1;1;0;0;1;1;1;1;1;1;1;1;0;1;1;1;48;0;-1;0;1;0;1;0;1;6;1;1;1;1
+61;Daniel;BA;AGERBA;1998;http://www.agerba.ba.gov.br/;1;1;0;1;1;1;0;1;1;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;0;0;-1;1;5;0;0;1;0;0;1;12;0;-1;1;0
+6;Julia;BA;AGERBA;1998;http://www.agerba.ba.gov.br/;1;1;0;1;1;1;0;1;1;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;0;0;-1;1;5;0;0;1;0;0;1;12;0;-1;1;0
+35;Valéria;BA;AGERBA;1998;http://www.agerba.ba.gov.br/;1;1;0;1;1;1;0;1;1;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;0;0;-1;1;5;0;0;1;0;0;1;12;0;-1;1;0
+22;Lucas;RS;AGERGS;1997;www.agergs.rs.gov.br;1;1;0;1;1;0;0;1;0;1;1;0;1;1;1;0;0;0;1;0;1;0;0;0;0;1;1;0;0;48;1;5;0;1;0;1;0;1;6;0;0;0;1
+51;Thierry;RS;AGERGS;1997;www.agergs.rs.gov.br;1;1;0;1;1;0;0;1;0;1;1;0;1;1;1;0;0;0;1;0;1;0;0;0;0;1;1;0;0;48;1;5;0;1;0;1;0;1;6;0;0;0;1
+23;Bernardo;RO;AGERO;2015;https://rondonia.ro.gov.br/agero/;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;1;0;1;0;1;1;0;0;0;0;1;0;1;48;1;5;1;1;0;0;1;0;-1;1;1;1;0
+52;José Vasco;RO;AGERO;2015;https://rondonia.ro.gov.br/agero/;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;1;0;1;0;1;1;0;0;0;0;1;0;1;48;1;5;1;1;0;0;1;0;-1;1;1;1;0
+60;Daniel;BA;AGERSA;2012;www.agersa.ba.gov.br;1;1;0;1;0;0;0;0;0;1;1;0;0;0;1;0;0;1;1;0;0;1;0;0;1;0;0;0;0;-1;1;-1;0;0;0;0;1;1;6;0;0;0;0
+5;Julia;BA;AGERSA;2012;www.agersa.ba.gov.br;1;1;0;1;0;0;0;0;0;1;1;0;0;0;1;0;0;1;1;0;0;1;0;0;1;0;0;0;0;-1;1;-1;0;0;0;0;1;1;6;0;0;0;0
+34;Valéria;BA;AGERSA;2012;www.agersa.ba.gov.br;1;1;0;1;0;0;0;0;0;1;1;0;0;0;1;0;0;1;1;0;0;1;0;0;1;0;0;0;0;-1;1;-1;0;0;0;0;1;1;6;0;0;0;0
+58;Daniel;RJ;AGETRANSP;2005;www.agetransp.rj.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;0;0;48;1;10;1;1;1;0;0;1;12;0;0;1;1
+19;Julia;RJ;AGETRANSP;2005;www.agetransp.rj.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;0;0;48;1;10;1;1;1;0;0;1;12;0;0;1;1
+48;Valéria;RJ;AGETRANSP;2005;www.agetransp.rj.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;0;0;48;1;10;1;1;1;0;0;1;12;0;0;1;1
+9;Lucas;GO;AGR;1999;https://www.agr.go.gov.br/a-agencia/;1;1;0;1;1;1;0;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;1;0;4;0;0;1;1
+38;Thierry;GO;AGR;1999;https://www.agr.go.gov.br/a-agencia/;1;1;0;1;1;1;0;1;1;1;1;1;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;1;0;4;0;0;1;1
+66;Daniel;SE;AGRESE;2009;www.agrese.se.gov.br;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;24;0;-1;0;0;1;0;0;1;12;0;0;1;1
+27;Julia;SE;AGRESE;2009;www.agrese.se.gov.br;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;24;0;-1;0;0;1;0;0;1;12;0;0;1;1
+56;Valeria;SE;AGRESE;2009;www.agrese.se.gov.br;1;1;0;1;1;1;1;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;24;0;-1;0;0;1;0;0;1;12;0;0;1;1
+18;Bernardo;PI;AGRESPI;2017;http://www.agrespi.pi.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;1;1;1;1;1;1;1;0;0;0;1;1;1;48;0;0;0;1;0;0;1;1;12;1;1;1;1
+47;José Vasco;PI;AGRESPI;2017;http://www.agrespi.pi.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;1;1;1;1;1;1;1;0;0;0;1;1;1;48;0;0;0;1;0;0;1;1;12;1;1;1;1
+7;Bernardo;CE;ARCE;1997;https://www.arce.ce.gov.br/institucional/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;0;0;1;0;1;60;1;-1;0;1;0;0;0;1;4;1;1;1;1
+36;José Vasco;CE;ARCE;1997;https://www.arce.ce.gov.br/institucional/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;0;0;1;1;0;1;1;0;0;0;0;1;0;1;60;1;-1;0;1;0;0;0;1;4;1;1;1;1
+14;Bernardo;PA;ARCON;1997;http://www.arcon.pa.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;0;1;0;1;48;0;-1;0;1;0;0;0;1;12;1;0;1;0
+43;José Vasco;PA;ARCON;1997;http://www.arcon.pa.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;0;1;0;1;48;0;-1;0;1;0;0;0;1;12;1;0;1;0
+24;Lucas;SC;ARESC;2015;http://www.aresc.sc.gov.br/;1;1;1;1;1;1;1;1;0;1;1;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;48;0;-1;1;1;0;0;0;1;6;0;0;1;1
+53;Thierry;SC;ARESC;2015;http://www.aresc.sc.gov.br/;1;1;1;1;1;1;1;1;0;1;1;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;48;0;-1;1;1;0;0;0;1;6;0;0;1;1
+64;Daniel;PB;ARPB;2005;http://arpb.pb.gov.br/;1;1;0;1;1;1;1;1;0;1;1;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;0;1;12;0;0;1;1
+15;Julia;PB;ARPB;2005;http://arpb.pb.gov.br/;1;1;0;1;1;1;1;1;0;1;1;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;0;1;12;0;0;1;1
+44;Valeria;PB;ARPB;2005;http://arpb.pb.gov.br/;1;1;0;1;1;1;1;1;0;1;1;0;1;1;1;0;0;1;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;0;1;12;0;0;1;1
+65;Daniel;PE;ARPE;2000;www.arpe.pe.gov.br;1;1;0;1;1;0;0;1;0;1;1;0;1;1;1;0;0;0;1;1;1;1;0;0;1;0;1;1;1;48;0;-1;1;1;0;0;0;1;4;0;0;1;0
+17;Julia;PE;ARPE;2000;www.arpe.pe.gov.br;1;1;0;1;1;0;0;1;0;1;1;0;1;1;1;0;0;0;1;1;1;1;0;0;1;0;1;1;1;48;0;-1;1;1;0;0;0;1;4;0;0;1;0
+46;Valeria;PE;ARPE;2000;www.arpe.pe.gov.br;1;1;0;1;1;0;0;1;0;1;1;0;1;1;1;0;0;0;1;1;1;1;0;0;1;0;1;1;1;48;0;-1;1;1;0;0;0;1;4;0;0;1;0
+13;Bernardo;MG;ARSAE;2009;http://www.arsae.mg.gov.br/;1;1;0;1;1;1;1;1;0;1;0;1;1;1;1;0;1;1;1;0;1;1;0;1;0;0;1;1;1;48;0;-1;0;1;0;0;1;1;12;0;0;1;1
+42;José Vasco;MG;ARSAE;2009;http://www.arsae.mg.gov.br/;1;1;0;1;1;1;1;1;0;1;0;1;1;1;1;0;1;1;1;0;1;1;0;1;0;0;1;1;1;48;0;-1;0;1;0;0;1;1;12;0;0;1;1
+62;Daniel;AL;ARSAL;2001;http://www.arsal.al.gov.br/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;36;1;-1;0;1;1;0;0;1;12;0;0;1;1
+2;Julia;AL;ARSAL;2001;http://www.arsal.al.gov.br/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;36;1;-1;0;1;1;0;0;1;12;0;0;1;1
+31;Valeria;AL;ARSAL;2001;http://www.arsal.al.gov.br/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;36;1;-1;0;1;1;0;0;1;12;0;0;1;1
+3;Lucas;AP;ARSAP;2001;https://www.portal.ap.gov.br/estrutura/agencia-reguladora-de-servicos-publicos-do-amapa;1;1;0;1;1;1;1;1;0;1;1;0;1;1;1;0;0;1;1;1;1;1;1;1;1;0;1;1;1;60;1;2;0;1;0;0;1;1;12;1;1;1;1
+32;Thierry;AP;ARSAP;2001;https://www.portal.ap.gov.br/estrutura/agencia-reguladora-de-servicos-publicos-do-amapa;1;1;0;1;1;1;1;1;0;1;1;0;1;1;1;0;0;1;1;1;1;1;1;1;1;0;1;1;1;60;1;2;0;1;0;0;1;1;12;1;1;1;1
+21;Lucas;RN;ARSEP;1999;https://www.arsep.rn.gov.br/2022/;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;0;1;6;1;1;1;1
+50;Thierry;RN;ARSEP;1999;https://www.arsep.rn.gov.br/2022/;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;0;0;0;1;0;1;1;0;0;1;0;1;1;1;48;1;-1;0;1;0;0;0;1;6;1;1;1;1
+33;Gustavo;AM;ARSEPAM;1999;http://www.arsepam.am.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;1;48;0;0;0;0;0;0;0;1;6;0;-1;0;0
+4;Soraya;AM;ARSEPAM;1999;http://www.arsepam.am.gov.br/;1;1;0;1;1;0;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;1;48;0;0;0;0;0;0;0;1;6;0;-1;0;0
+26;Bernardo;SP;ARSESP;2007;http://www.arsesp.sp.gov.br/SitePages/home.aspx;1;1;0;1;1;0;0;1;1;1;0;0;1;1;0;0;1;1;1;1;0;1;0;0;0;0;1;1;1;60;1;5;0;1;0;0;0;1;4;1;0;1;1
+55;José Vasco;SP;ARSESP;2007;http://www.arsesp.sp.gov.br/SitePages/home.aspx;1;1;0;1;1;0;0;1;1;1;0;0;1;1;0;0;1;1;1;1;0;1;0;0;0;0;1;1;1;60;1;5;0;1;0;0;0;1;4;1;0;1;1
+63;Daniel;ES;ARSP;1998;https://arsp.es.gov.br/;1;1;1;1;1;1;1;1;1;1;0;0;1;1;0;1;1;1;1;1;0;1;0;0;1;0;1;0;1;36;0;-1;0;0;0;0;0;1;12;0;1;1;0
+8;Julia;ES;ARSP;1998;https://arsp.es.gov.br/;1;1;1;1;1;1;1;1;1;1;0;0;1;1;0;1;1;1;1;1;0;1;0;0;1;0;1;0;1;36;0;-1;0;0;0;0;0;1;12;0;1;1;0
+37;Valeria;ES;ARSP;1998;https://arsp.es.gov.br/;1;1;1;1;1;1;1;1;1;1;0;0;1;1;0;1;1;1;1;1;0;1;0;0;1;0;1;0;1;36;0;-1;0;0;0;0;0;1;12;0;1;1;0
+54;Gustavo;SP;ARTESP;2002;www.artesp.sp.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;1;0;1;0;0;1;0;1;1;1;48;1;5;0;0;0;0;1;0;0;1;1;1;1
+25;Soraya;SP;ARTESP;2002;www.artesp.sp.gov.br;1;1;0;1;1;0;1;1;0;1;0;0;1;1;1;1;1;1;1;1;0;1;0;0;1;0;1;1;1;48;1;5;0;0;0;0;1;0;0;1;1;1;1
+57;Gustavo;TO;ATR;2006;https://www.to.gov.br/atr/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;0;48;0;0;0;1;0;0;0;1;4;0;0;1;0
+28;Soraya;TO;ATR;2000;https://www.to.gov.br/atr/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;1;0;0;1;0;1;0;0;48;0;0;0;1;0;0;0;1;4;0;0;1;0
+39;Gustavo;MA;MOB;2015;https://mob.ma.gov.br/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+10;Soraya;MA;MOB;2015;https://mob.ma.gov.br/;1;1;0;1;1;1;0;1;0;1;0;0;1;1;1;1;1;1;1;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
