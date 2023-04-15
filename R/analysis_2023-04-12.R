@@ -28,7 +28,9 @@ for (i in seq_along(df)) {
 
 # Functions ---------------------------------------------------------------
 
-plot_boolean <- function(measurement, col, clean_col, dir = "./plots/categorias_booleanas") {
+plot_boolean <- function(
+    measurement, col, clean_col, dir = "./plots/categorias_booleanas"
+  ) {
   ref <- tibble(
     x = measurement
   )
@@ -46,7 +48,9 @@ plot_boolean <- function(measurement, col, clean_col, dir = "./plots/categorias_
   )
 }
 
-plot_numeric <- function(measurement, col, clean_col, dir = "./plots/categorias_numericas") {
+plot_numeric <- function(
+    measurement, col, clean_col, dir = "./plots/categorias_numericas"
+  ) {
   ref <- tibble(
     x = measurement
   ) %>%
@@ -194,7 +198,9 @@ corrplot(cor_booleans, method = "shade", type = "lower")
 
 df_agencies_boolean <- df %>% 
   select(all_of(c("Nome", cols_boolean))) %>%
-  pivot_longer(cols = all_of(cols_boolean), names_to = "categoria", values_to = "classificacao") %>%
+  pivot_longer(
+      cols = all_of(cols_boolean), names_to = "categoria", values_to = "classificacao"
+    ) %>%
   group_by(Nome) %>%
   summarise(mean_v = mean(classificacao, na.rm = TRUE))
 
@@ -231,5 +237,6 @@ df_numeric %>%
 ) %>%
   View()
 
-View(boolean_heterogeneity %>% mutate(Prevalencia = ifelse(Classe0 > Classe1, "Classe 0", "Classe 1")))
+View(boolean_heterogeneity %>%
+  mutate(Prevalencia = ifelse(Classe0 > Classe1, "Classe 0", "Classe 1")))
 
