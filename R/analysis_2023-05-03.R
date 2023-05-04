@@ -186,7 +186,7 @@ df_dimensions_select %>%
   scale_y_continuous(breaks = seq(0, 20, 2)) +
   scale_x_continuous(breaks = seq(0, 1, 0.1))
 
-save_plot("6_autonomia_institucional_dispersao.png")
+save_plot("6_boas_praticas_dispersao.png")
 
 ## Fiscalização e julgamento
 
