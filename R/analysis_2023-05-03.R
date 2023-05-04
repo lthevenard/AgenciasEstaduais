@@ -55,7 +55,7 @@ df_dimensions_select_longer <- df_dimensions_select %>%
     name == "fiscalizacao_julgamento_perc" ~ "Fiscalização e julgamento",
     name == "autonomia_institucional_perc" ~ "Autonomia institucional",
     name == "dirigentes_perc" ~ "Seleção dos dirigentes",
-    name == "integridade_perc" ~ "Integridade e compliance"
+    name == "integridade_perc" ~ "Integridade e governança"
   ))
 
 df_subdimensions <- df_dimensions %>%
@@ -214,8 +214,8 @@ save_plot("8_fiscalizacao_julgamento_dispersao.png")
 df_dimensions_select %>%
   ggplot(aes(x = fct_reorder(nome, integridade_perc), y = integridade_perc)) +
   geom_col(fill=palette_1[4]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de integridade e compliance",
-       subtitle = subtitle, x = "", y = "Indicador de Integridade e Compliance") +
+  labs(title = "Comparação entre as agências estaduais: indicador de integridade e governança",
+       subtitle = subtitle, x = "", y = "Indicador de Integridade e Governança") +
   coord_flip()
 
 save_plot("9_integridade_agencias.png")
@@ -223,8 +223,8 @@ save_plot("9_integridade_agencias.png")
 df_dimensions_select %>%
   ggplot(aes(x = fiscalizacao_julgamento_perc)) +
   geom_histogram(fill=palette_1[4]) +
-  labs(x = "Indicador de Integridade e Compliance", y = "Número de casos",
-       title = "Dispersão do indicador de integridade e compliance", subtitle=subtitle) +
+  labs(x = "Indicador de Integridade e governança", y = "Número de casos",
+       title = "Dispersão do indicador de integridade e governança", subtitle=subtitle) +
   scale_y_continuous(breaks = seq(0, 20, 2)) +
   scale_x_continuous(breaks = seq(0, 1, 0.1))
 
