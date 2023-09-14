@@ -23,49 +23,51 @@ names(df)
 df_dimensions <- df %>%
   na_to_zero() %>%
   mutate(
-    ouvidoria = (ouvidoria + ouvidor_mandato_fixo) / 2,
-    pge = (3 - assessoria_vinculada_pge - assessores_procuradores - algum_procurador) / 3,
-    integridade_soma = ouvidoria + pge + programa_de_compliance + assessoria_juridica,
-    integridade_perc = integridade_soma / 4,
-    requisitos_impedimentos = (algum_impedimento_previo_setor + alguma_vedacao_setor_publico + vedacao_filiacao_partidaria + experiencia_previa + quarentena) / 5,
-    processo_nomeacao = (nomeacao_exclusivamente_pelo_governador + aprovacao_assembleia + sabatina_assembleia + eleicao_interna_presidente - indicacao_livre_mandatos_provisorios) / 4,
-    garantias_funcionais = (mandato_definido + mandato_nao_coincidente_diretores + mandato_nao_coincidente_governador + preve_casos_exoneracao + preve_procedimento_exoneracao) / 5,
-    dirigentes_soma = requisitos_impedimentos + processo_nomeacao + garantias_funcionais,
-    dirigentes_perc = dirigentes_soma / 3,
+    ## Autonomia e poderes regulatórios
     previsoes_expressas = (autonomia_administrativa + autonomia_financeira + autonomia_patrimonial + autonomia_tecnica) / 4,
-    autonomia_institucional_soma = previsoes_expressas + taxa_de_regulacao + competencia_normativa + poder_concedente,
-    autonomia_institucional_perc = autonomia_institucional_soma / 4,
-    fiscalizacao_julgamento_soma = poder_tac + poder_sancionatorio + multa,
-    fiscalizacao_julgamento_perc = fiscalizacao_julgamento_soma / 3,
-    boas_praticas_soma = agenda_regulatoria + analise_de_impacto + participacao_social,
-    boas_praticas_perc = boas_praticas_soma / 3
-  )
+    pge = (3 - assessoria_vinculada_pge - assessores_procuradores - algum_procurador) / 3,
+    autonomia_soma = previsoes_expressas + pge + taxa_de_regulacao + competencia_normativa + (1 - poder_concedente) + poder_sancionatorio + poder_tac,
+    autonomia_perc = autonomia_soma / 7,
+    ## Governança e boas práticas
+    ouvidoria = (ouvidoria + ouvidor_mandato_fixo) / 2,
+    governanca_soma = ouvidoria + programa_de_compliance + participacao_social + analise_de_impacto + agenda_regulatoria,
+    governanca_perc = governanca_soma / 5,
+    ## Requisitos/impedimentos dos dirigentes
+    requisitos_impedimentos_soma = algum_impedimento_previo_setor + alguma_vedacao_setor_publico + vedacao_filiacao_partidaria + experiencia_previa + quarentena,
+    requisitos_impedimentos_perc = requisitos_impedimentos_soma  / 5,
+    ## Processo de nomeação dos dirigentes
+    processo_nomeacao_soma = nomeacao_exclusivamente_pelo_governador + aprovacao_assembleia + sabatina_assembleia + eleicao_interna_presidente + (1 - indicacao_livre_mandatos_provisorios),
+    processo_nomeacao_perc = processo_nomeacao_soma / 5,
+    ## Garantias funcionais dos dirigentes
+    garantias_funcionais_soma = mandato_definido + mandato_nao_coincidente_diretores + mandato_nao_coincidente_governador + preve_casos_exoneracao + preve_procedimento_exoneracao,
+    garantias_funcionais_perc = garantias_funcionais_soma / 5
+)
 
 df_dimensions_select <- df_dimensions %>%
-  select(uf, nome, boas_praticas_soma, boas_praticas_perc, fiscalizacao_julgamento_soma,
-         fiscalizacao_julgamento_perc, autonomia_institucional_soma, autonomia_institucional_perc,
-         dirigentes_soma, dirigentes_perc, integridade_soma, integridade_perc)
+  select(uf, nome, autonomia_soma, autonomia_perc, governanca_soma, governanca_perc,
+         requisitos_impedimentos_soma, requisitos_impedimentos_perc, processo_nomeacao_soma,
+         processo_nomeacao_perc, garantias_funcionais_soma, garantias_funcionais_perc)
 
 
 df_dimensions_select_longer <- df_dimensions_select %>%
-  select(nome, boas_praticas_perc, fiscalizacao_julgamento_perc, autonomia_institucional_perc, dirigentes_perc, integridade_perc) %>%
-  pivot_longer(cols = c("boas_praticas_perc", "fiscalizacao_julgamento_perc", "autonomia_institucional_perc", "dirigentes_perc", "integridade_perc")) %>%
+  select(nome, autonomia_perc, governanca_perc, requisitos_impedimentos_perc, processo_nomeacao_perc, garantias_funcionais_perc) %>%
+  pivot_longer(cols = c("autonomia_perc", "governanca_perc", "requisitos_impedimentos_perc", "processo_nomeacao_perc", "garantias_funcionais_perc")) %>%
   mutate(name = case_when(
-    name == "boas_praticas_perc" ~ "Boas práticas regulatórias",
-    name == "fiscalizacao_julgamento_perc" ~ "Fiscalização e julgamento",
-    name == "autonomia_institucional_perc" ~ "Autonomia institucional",
-    name == "dirigentes_perc" ~ "Seleção dos dirigentes",
-    name == "integridade_perc" ~ "Integridade e governança"
+    name == "autonomia_perc" ~ "Autonomia e poderes regulatórios",
+    name == "governanca_perc" ~ "Governança e boas práticas",
+    name == "requisitos_impedimentos_perc" ~ "Requisitos/impedimentos dos dirigentes",
+    name == "processo_nomeacao_perc" ~ "Processo de nomeação dos dirigentes",
+    name == "garantias_funcionais_perc" ~ "Garantias funcionais dos dirigentes"
   ))
 
-df_subdimensions <- df_dimensions %>%
-  select(nome, processo_nomeacao, garantias_funcionais, requisitos_impedimentos) %>%
-  pivot_longer(cols = c("processo_nomeacao", "garantias_funcionais", "requisitos_impedimentos")) %>%
-  mutate(name = case_when(
-    name == "processo_nomeacao" ~ "Processo de Nomeação",
-    name == "garantias_funcionais" ~ "Garantias Funcionais",
-    name == "requisitos_impedimentos" ~ "Requisitos e Impedimentos"
-  ))
+# df_subdimensions <- df_dimensions %>%
+#   select(nome, processo_nomeacao, garantias_funcionais, requisitos_impedimentos) %>%
+#   pivot_longer(cols = c("processo_nomeacao", "garantias_funcionais", "requisitos_impedimentos")) %>%
+#   mutate(name = case_when(
+#     name == "processo_nomeacao" ~ "Processo de Nomeação",
+#     name == "garantias_funcionais" ~ "Garantias Funcionais",
+#     name == "requisitos_impedimentos" ~ "Requisitos e Impedimentos"
+#   ))
 
 # Theme -------------------------------------------------------------------
 
@@ -112,7 +114,7 @@ set_theme_fgv_digital <- function () {
 }
 
 
-save_plot <- function(filename, path = "./plots/2023-05-03", height = 6, width = 10, dpi = 300, ...) {
+save_plot <- function(filename, path = "./plots/2023-05-15", height = 6, width = 10, dpi = 300, ...) {
   ggsave(filename=filename, height=height, width=width, path=path, dpi=dpi, ...)
 }
 
@@ -146,130 +148,108 @@ df_dimensions_select_longer %>%
 
 save_plot("2_comparacao_dimensoes.png")
 
-## Autonomia institucional
+## Autonomia e poderes regulatórios
 
 df_dimensions_select %>%
-  ggplot(aes(x = fct_reorder(nome, autonomia_institucional_perc), y = autonomia_institucional_perc)) +
+  ggplot(aes(x = fct_reorder(nome, autonomia_perc), y = autonomia_perc)) +
   geom_col(fill=palette_1[1]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de autonomia institucional",
-       subtitle = subtitle, x = "", y = "Indicador de Autonomia Institucional") +
+  labs(title = "Comparação entre as agências: indicador de autonomia e poderes regulatórios",
+       subtitle = subtitle, x = "", y = "Indicador de autonomia e poderes regulatórios") +
   coord_flip()
   
-save_plot("3_autonomia_institucional_agencias.png")
+save_plot("3_autonomia.png")
 
 df_dimensions_select %>%
-  ggplot(aes(x = autonomia_institucional_perc)) +
+  ggplot(aes(x = autonomia_perc)) +
   geom_histogram(fill=palette_1[1]) +
-  labs(x = "Indicador de Autonomia Institucional", y = "Número de casos",
-       title = "Dispersão do indicador de autonomia institucional", subtitle=subtitle) +
-  scale_y_continuous(breaks = 0:10) +
-  scale_x_continuous(breaks = seq(0, 1, 0.1))
+  labs(x = "Indicador de autonomia e poderes regulatórios", y = "Número de casos",
+       title = "Dispersão do indicador de autonomia e poderes regulatórios", subtitle=subtitle) +
+  scale_y_continuous(breaks = 0:6, limits = c(0, 6.5)) +
+  scale_x_continuous(breaks = seq(0, 1, 0.1), limits = c(0, 1))
 
-save_plot("4_autonomia_institucional_dispersao.png")
+save_plot("4_autonomia_dispersao.png")
 
-## Boas práticas
+## Garantias funcionais dos dirigentes
 
 df_dimensions_select %>%
-  ggplot(aes(x = fct_reorder(nome, boas_praticas_perc), y = boas_praticas_perc)) +
+  ggplot(aes(x = fct_reorder(nome, garantias_funcionais_perc), y = garantias_funcionais_perc)) +
   geom_col(fill=palette_1[2]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de boas práticas",
-       subtitle = subtitle, x = "", y = "Indicador de Boas Práticas Regulatórias") +
+  labs(title = "Comparação entre as agências: indicador de garantias funcionais dos dirigentes",
+       subtitle = subtitle, x = "", y = "Indicador de garantias funcionais dos dirigentes") +
   coord_flip()
 
-save_plot("5_boas_praticas_agencias.png")
+save_plot("5_garantias.png")
 
 df_dimensions_select %>%
-  ggplot(aes(x = boas_praticas_perc)) +
+  ggplot(aes(x = garantias_funcionais_perc)) +
   geom_histogram(fill=palette_1[2]) +
-  labs(x = "Indicador de Boas Práticas Regulatórias", y = "Número de casos",
-       title = "Dispersão do indicador de boas práticas", subtitle=subtitle) +
-  scale_y_continuous(breaks = seq(0, 20, 2)) +
-  scale_x_continuous(breaks = seq(0, 1, 0.1))
+  labs(x = "Indicador de garantias funcionais dos dirigentes", y = "Número de casos",
+       title = "Dispersão do indicador de garantias funcionais dos dirigentes", subtitle=subtitle) +
+  scale_y_continuous(breaks = seq(0, 14, 2), limits = c(0, 15)) +
+  scale_x_continuous(breaks = seq(0, 1, 0.1), limits = c(0, 1.05))
 
-save_plot("6_boas_praticas_dispersao.png")
+save_plot("6_garantias_dispersao.png")
 
-## Fiscalização e julgamento
+## Governança e boas práticas
 
 df_dimensions_select %>%
-  ggplot(aes(x = fct_reorder(nome, fiscalizacao_julgamento_perc), y = fiscalizacao_julgamento_perc)) +
+  ggplot(aes(x = fct_reorder(nome, governanca_perc), y = governanca_perc)) +
   geom_col(fill=palette_1[3]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de fiscalização e julgamento",
-       subtitle = subtitle, x = "", y = "Indicador de Fiscalização e Julgamento") +
+  labs(title = "Comparação entre as agências: indicador de governança e boas práticas",
+       subtitle = subtitle, x = "", y = "Indicador de governança e boas práticas") +
   coord_flip()
 
-save_plot("7_fiscalizacao_julgamento_agencias.png")
+save_plot("7_governanca.png")
 
 df_dimensions_select %>%
-  ggplot(aes(x = fiscalizacao_julgamento_perc)) +
+  ggplot(aes(x = governanca_perc)) +
   geom_histogram(fill=palette_1[3]) +
-  labs(x = "Indicador de Fiscalização e Julgamento", y = "Número de casos",
-       title = "Dispersão do indicador de fiscalização e julgamento", subtitle=subtitle) +
+  labs(x = "Indicador de governança e boas práticas", y = "Número de casos",
+       title = "Dispersão do indicador de governança e boas práticas", subtitle=subtitle) +
   scale_y_continuous(breaks = seq(0, 20, 2)) +
   scale_x_continuous(breaks = seq(0, 1, 0.1))
 
-save_plot("8_fiscalizacao_julgamento_dispersao.png")
+save_plot("8_governanca_dispersao.png")
 
-## Integridade e compliance
+## Processo de nomeação dos dirigentes
 
 df_dimensions_select %>%
-  ggplot(aes(x = fct_reorder(nome, integridade_perc), y = integridade_perc)) +
+  ggplot(aes(x = fct_reorder(nome, processo_nomeacao_perc), y = processo_nomeacao_perc)) +
   geom_col(fill=palette_1[4]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de integridade e governança",
-       subtitle = subtitle, x = "", y = "Indicador de Integridade e Governança") +
+  labs(title = "Comparação entre as agências: indicador de processo de nomeação dos dirigentes",
+       subtitle = subtitle, x = "", y = "Indicador de processo de nomeação dos dirigentes") +
   coord_flip()
 
-save_plot("9_integridade_agencias.png")
+save_plot("9_nomeacao.png")
 
 df_dimensions_select %>%
-  ggplot(aes(x = fiscalizacao_julgamento_perc)) +
+  ggplot(aes(x = processo_nomeacao_perc)) +
   geom_histogram(fill=palette_1[4]) +
-  labs(x = "Indicador de Integridade e governança", y = "Número de casos",
-       title = "Dispersão do indicador de integridade e governança", subtitle=subtitle) +
+  labs(x = "Indicador de processo de nomeação dos dirigentes", y = "Número de casos",
+       title = "Dispersão do indicador de processo de nomeação dos dirigentes", subtitle=subtitle) +
   scale_y_continuous(breaks = seq(0, 20, 2)) +
   scale_x_continuous(breaks = seq(0, 1, 0.1))
 
-save_plot("10_integridade_dispersao.png")
+save_plot("10_nomeacao_dispersao.png")
 
-## Dirigentes
+## Requisitos/impedimentos dos dirigentes
 
 df_dimensions_select %>%
-  ggplot(aes(x = fct_reorder(nome, dirigentes_perc), y = dirigentes_perc)) +
+  ggplot(aes(x = fct_reorder(nome, requisitos_impedimentos_perc), y = requisitos_impedimentos_perc)) +
   geom_col(fill=palette_1[5]) +
-  labs(title = "Comparação entre as agências estaduais: indicador de seleção dos dirigentes",
-       subtitle = subtitle, x = "", y = "Indicador de Seleção dos Dirigentes") +
+  labs(title = "Comparação entre as agências: indicador de requisitos/impedimentos dos dirigentes",
+       subtitle = subtitle, x = "", y = "Indicador de requisitos/impedimentos dos dirigentes") +
   coord_flip()
 
-save_plot("11_dirigentes_agencias.png")
+save_plot("11_requisitos.png")
 
 df_dimensions_select %>%
-  ggplot(aes(x = dirigentes_perc)) +
+  ggplot(aes(x = requisitos_impedimentos_perc)) +
   geom_histogram(fill=palette_1[5]) +
-  labs(x = "Indicador de Seleção dos Dirigentes", y = "Número de casos",
-       title = "Dispersão do indicador de seleção dos dirigentes", subtitle=subtitle) +
+  labs(x = "Indicador de requisitos/impedimentos dos dirigentes", y = "Número de casos",
+       title = "Dispersão do indicador de requisitos/impedimentos dos dirigentes", subtitle=subtitle) +
   scale_y_continuous(breaks = seq(0, 20, 2)) +
-  scale_x_continuous(breaks = seq(0, 1, 0.1))
+  scale_x_continuous(breaks = seq(0, 1, 0.1), limits = c(0, 1))
 
-save_plot("12_dirigentes_dispersao.png")
+save_plot("12_requisitos_dispersao.png")
 
-df_subdimensions %>%
-  ggplot(aes(x = fct_reorder(nome, value, .fun = sum), y = value, fill = name)) +
-  geom_col() +
-  labs(
-    title = "Decomposição do indicador de seleção dos dirigentes em subdimensões",
-    subtitle = subtitle, x = "", y = "Indicador", fill = "Subdimensão"
-  ) +
-  scale_fill_manual(values = palette_2) +
-  coord_flip()
-
-save_plot("13_dirigentes_subs_comparacao.png")
-
-df_subdimensions %>%
-  ggplot(aes(x = fct_reorder(name, value), y = value, fill = name)) +
-  geom_boxplot() +
-  labs(x = "", y = "Valor dos indicadores", subtitle = subtitle, fill = "Subdimensão",
-       title = "Dispersão dos indicadores de cada subdimensão referente aos dirigentes") +
-  scale_fill_manual(values = palette_2) +
-  coord_flip()
-
-save_plot("14_dirigentes_subs_dispersao.png")
-  

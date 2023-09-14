@@ -1,38 +1,6 @@
 # Categorias
 
-## Integridade e governança
-- Ouvidoria
-  - Possui Ouvidoria +
-  - Ouvidor Mandato Fixo +
-- Programa de Compliance +
-- Assessoria Jurídica +
-- Grau e vinculação à PGE
-  - Assessoria Vinculada PGE -
-  - Assessores Procuradores -
-  - Algum Procurador - 
-
-## Dirigentes
-- Requisitos e Impedimentos
-  - Algum Impedimento Prévio Setor +
-  - Alguma Vedação Setor Público + !mudar p/ agentes políticos?!
-  - Vedação Filiação Partidária +
-  - Experiência Prévia +
-  - Quarentena +
-- Processo de nomeação
-  - Nomeação Exclusivamente pelo Governador +
-  - Aprovação Assembleia +
-  - Sabatina Assembleia +
-  - Eleição Interna Presidente +
-  - Indicação Livre Mandatos Provisórios - (compatibilizar e excluir: Disciplina Mandatos Provisórios)
-- Garantias funcionais
-  - Mandato Definido +
-  - Mandato Não-coincidente Diretores +
-  - Mandato Não-coincidente Governador +
-  - Prevê Casos Exoneração +
-  - Prevê Procedimento Exoneração +
-
-
-Autonomia Institucional
+## Autonomia e poderes regulatórios
 - Previsões Expressas
   - Autonomia Administrativa +
   - Autonomia Financeira +
@@ -40,15 +8,42 @@ Autonomia Institucional
   - Autonomia Patrimonial +
 - Taxa de Regulação +
 - Competência Normativa +
-- Poder Concedente +
-
-Fiscalização e Julgamento
+- Poder Concedente -
+- Grau de vinculação à PGE
+  - Assessoria Vinculada PGE -
+  - Assessores Procuradores -
+  - Algum Procurador -
 - Poder Sancionatório +
 - Poder TAC +
-- Multa +
 
-Boas práticas regulatórias
+## Governança e boas práticas
+- Ouvidoria
+  - Possui Ouvidoria +
+  - Ouvidor Mandato Fixo +
+- Programa de Compliance +
 - Agenda Regulatória +
 - Análise de Impacto +
 - Participação Social +
+
+
+## Independência e expertise dos dirigentes
+- Requisitos/impedimentos dos dirigentes
+  - Algum impedimento prévio setor +
+  - Alguma vedação agente político +
+  - Vedação Filiação Partidária +
+  - Experiência Prévia +
+  - Quarentena +
+- Processo de nomeação dos dirigentes
+  - Aprovação Assembleia +
+  - Sabatina Assembleia +
+  - Eleição Interna Presidente +
+  - Indicação Livre Mandatos Provisórios - (compatibilizar e excluir: Disciplina Mandatos Provisórios)
+- Garantias funcionais dos dirigentes
+  - Mandato Definido +
+  - Mandato Não-coincidente Diretores +
+  - Mandato Não-coincidente Governador +
+  - Prevê Casos Exoneração +
+  - Prevê Procedimento Exoneração +
+
+
 
